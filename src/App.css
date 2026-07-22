@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f5;
+  color: #333;
+}
+
+.app-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.app-container h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #1a252f;
+  font-size: 1.8rem;
+  letter-spacing: 0.5px;
+}

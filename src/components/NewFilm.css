@@ -1,4 +1,3 @@
-/* src/components/NewFilm.css */
 .new-film-form {
   display: flex;
   flex-direction: column;
@@ -12,7 +11,27 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
 }
 
 .submit-btn {
@@ -23,8 +42,9 @@
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 8px;
 }
 
 .submit-btn:hover {
-  background-color: #dc3545;
+  background-color: #bd2130;
 }
