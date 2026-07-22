@@ -1,3 +1,4 @@
+JavaScript;
 import { useState } from "react";
 import "./Newfilm.css";
 
@@ -20,13 +21,8 @@ export const NewFilm = (props) => {
       onSubmit={(e) => {
         e.preventDefault();
         if (formData.title.trim() !== "") {
-          props.setFilms((film) =>
-            items.concat({
-              id: Date.now(),
-              title: formData.title,
-              genre: formData.genre,
-            }),
-          );
+          props.onAddFilm(formData);
+
           setFormData({
             title: "",
             genre: "",
@@ -43,6 +39,7 @@ export const NewFilm = (props) => {
         value={formData.title}
         onChange={handleFormChange}
       />
+
       <label htmlFor="genre">Inserisci il genere del film:</label>
       <input
         id="genre"
