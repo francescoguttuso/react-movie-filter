@@ -1,4 +1,4 @@
-export const movies = [
+export const films = [
   { id: 1, title: "Inception", genre: "Fantascienza" },
   { id: 2, title: "Il Padrino", genre: "Thriller" },
   { id: 3, title: "Titanic", genre: "Romantico" },
