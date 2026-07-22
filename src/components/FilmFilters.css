@@ -1,0 +1,21 @@
+.filters-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-input,
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.filter-input {
+  flex: 2;
+}
+
+.filter-select {
+  flex: 1;
+}

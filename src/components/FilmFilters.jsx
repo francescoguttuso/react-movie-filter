@@ -10,6 +10,7 @@ export const FilmFilters = ({
   return (
     <div className="filters-container">
       <input
+        className="filter-input"
         type="text"
         placeholder="Cerca per titolo..."
         value={searchTitle}
@@ -17,6 +18,7 @@ export const FilmFilters = ({
       />
 
       <select
+        className="filter-select"
         value={selectedGenre}
         onChange={(e) => onGenreChange(e.target.value)}
       >

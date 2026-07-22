@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Newfilm.css";
+import "./NewFilm.css";
 
 export const NewFilm = (props) => {
   const [formData, setFormData] = useState({
@@ -17,39 +17,42 @@ export const NewFilm = (props) => {
 
   return (
     <form
+      className="new-film-form"
       onSubmit={(e) => {
         e.preventDefault();
         if (formData.title.trim() !== "") {
           props.onAddFilm(formData);
-
-          setFormData({
-            title: "",
-            genre: "",
-          });
+          setFormData({ title: "", genre: "" });
         }
       }}
     >
-      <label htmlFor="title">Inserisci il titolo del film:</label>
-      <input
-        id="title"
-        type="text"
-        name="title"
-        placeholder="Inserisci titolo"
-        value={formData.title}
-        onChange={handleFormChange}
-      />
+      <div className="form-group">
+        <label htmlFor="title">Inserisci il titolo del film:</label>
+        <input
+          id="title"
+          type="text"
+          name="title"
+          placeholder="Inserisci titolo"
+          value={formData.title}
+          onChange={handleFormChange}
+        />
+      </div>
 
-      <label htmlFor="genre">Inserisci il genere del film:</label>
-      <input
-        id="genre"
-        type="text"
-        name="genre"
-        placeholder="Inserisci genere"
-        value={formData.genre}
-        onChange={handleFormChange}
-      />
+      <div className="form-group">
+        <label htmlFor="genre">Inserisci il genere del film:</label>
+        <input
+          id="genre"
+          type="text"
+          name="genre"
+          placeholder="Inserisci genere"
+          value={formData.genre}
+          onChange={handleFormChange}
+        />
+      </div>
 
-      <button type="submit">Aggiungi alla mia lista di Film</button>
+      <button type="submit" className="submit-btn">
+        Aggiungi alla mia lista di Film
+      </button>
     </form>
   );
 };
