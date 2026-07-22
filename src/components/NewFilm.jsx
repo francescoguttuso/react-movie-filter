@@ -1,4 +1,3 @@
-JavaScript;
 import { useState } from "react";
 import "./Newfilm.css";
 
