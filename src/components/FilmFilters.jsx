@@ -1,31 +1,30 @@
 import "./FilmFilters.css";
 
-export const FilmFilters = ({
-  searchTitle,
-  onSearchChange,
-  selectedGenre,
-  onGenreChange,
-  genres,
-}) => {
+
+export const FilmFilters = (props) => {
+
+  const genresList = props.genres || [];
+
   return (
     <div className="filters-container">
       <input
         className="filter-input"
         type="text"
         placeholder="Cerca per titolo..."
-        value={searchTitle}
-        onChange={(e) => onSearchChange(e.target.value)}
+        value={props.searchTitle}
+        onChange={(e) => props.onSearchChange(e.target.value)}
       />
 
       <select
         className="filter-select"
-        value={selectedGenre}
-        onChange={(e) => onGenreChange(e.target.value)}
+        value={props.selectedGenre}
+        onChange={(e) => props.onGenreChange(e.target.value)}
       >
         <option value="">Tutti i generi</option>
-        {genres.map((genere) => (
-          <option key={genere} value={genere}>
-            {genere}
+
+        {genresList.map((genre) => (
+          <option key={genre} value={genre}>
+            {genre}
           </option>
         ))}
       </select>
